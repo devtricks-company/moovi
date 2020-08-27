@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#navbar{
+    width: 100%;
+    padding: 1rem 0;
+    background: rgba(0,0,0,0.6);
+    position:fixed;
+    z-index: 8;
+}
+#navbar .container{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#navbar .menu-bar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+#navbar .menu-bar li{
+    padding: 0 1.5rem;
+}
+#navbar .menu-bar li a{
+    font-family: 'Josefin Sans', sans-serif;
+    color:white;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25.5px;
+    text-decoration: none;
+}
+#navbar  .icons{
+    display: flex;
+    align-items: center;
+}
+#navbar .icons a{
+    padding:0 0.5rem;
+    color:white;
+    font-size:25px;
+}
+#navbar .icons a:last-child{
+    display: none;
+}
+
+/* #header */
+#header{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/banner-main1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+
+#header h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:100px;
+    font-weight: 700;
+    line-height: 130px;
+    color:white;
+    text-transform: uppercase;
+    width: 60%;
+    margin: 0 auto;
+}
+#header p{
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 43.2px;
+    color:white;
+    padding-bottom:4rem;
+}
+
+#header a.more{
+    padding:15px 30px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    border-radius: 7px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    position: relative;
+  
+}
+#header a.more::before{
+    content:'';
+    position: absolute;
+    width:0;
+    height: 0;
+    opacity: 0;
+    top:0;
+    left:0;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    
+   
+   
+}
+#header a.more::after{
+    content:'';
+    position: absolute;
+    width:0;
+    height: 0;
+    opacity: 0;
+    bottom:0;
+    right:0;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+   
+
+   
+}
+
+#header a.more:hover::before{
+    width:100%;
+    height: 100%;
+    opacity: 1;
+    background: #01091e;
+   
+    
+}
+#header a.more:hover::after{
+    width:100%;
+    height: 100%;
+    opacity: 1;
+    background: #01091e;
+  
+}
+
+#header span{
+    position: relative;
+    z-index:5;
+    color:black;;
+    transition: all 0.5s ease-in-out;
+}
+#header a.more:hover span{
+    color:white;
+}
+#header .socials{
+   transform: rotate(-90deg);
+   position: absolute;
+   right:0;
+   top:50%;
+
+}
+#header .socials span{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+#header .socials a{
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    padding:0 5px;
+}
+
+
+/* media queries */
+@media(max-width: 1200px){
+
+    #navbar .icons a:last-child{
+        display: inline;
+    }
+    #navbar .menu-bar{
+        display: none;
+    }
+
+    #header h1{
+        font-size:45px;
+        line-height: 58.5px;
+    }
+    #header .socials{
+        transform: rotate(0deg);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        margin-top: 2rem;
+        top:0;
+
+    }
+}
