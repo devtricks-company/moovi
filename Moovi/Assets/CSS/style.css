@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#navbar{
+    width: 100%;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 5;
+}
+
+#navbar .container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-bar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-bar li{
+    padding: 0 1.5rem;
+}
+
+.menu-bar li a{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: capitalize;
+    line-height: 25.5px;
+    text-decoration: none;
+}
+
+#navbar .icons{
+    display: flex;
+    align-items: center;
+}
+
+#navbar .icons a{
+    padding: 0 0.5rem;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+#navbar .icons a:last-child{
+    display: none;
+}
+
+
+
+/*------------------------------------------*/
+/*------------------HEADER------------------*/
+
+#header{
+
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) ,url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+
+#header h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#header p{
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 43.2px;
+    color:white;
+    padding-bottom:4rem;
+}
+
+#header a.more{
+    padding:15px 30px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    border-radius: 7px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    position: relative;
+  
+}
+
+#header a.more::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    background: #01091e;
+}
+
+
+#header a.more::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    background: #01091e;
+}
+
+#header a.more:hover::before{
+    width: 100%;
+    height:100%;
+    opacity: 1;
+}
+
+#header a.more:hover::after{
+    width: 100%;
+    height:100%;
+    opacity: 1;
+}
+
+#header span{
+    position: relative;
+    z-index: 5;
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+#header a.more:hover span{
+    color: white;
+}
+
+
+#header .socials{
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 0;
+    top:50%;
+}
+
+#header .socials span{
+    color:white;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+#header .socials a{
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    padding:0 5px;
+}
+
+/*------------------------------------------*/
+/*------------------ Media Queries----------- */
+@media(max-width: 1200px){
+    #navbar .icons a:last-child{
+        display: inline;
+    }
+    #navbar .menu-bar{
+        display: none;
+    }
+    #header h1{
+        font-size:45px;
+        line-height: 58.5px;
+    }
+    #header .socials{
+        transform: rotate(0deg);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        margin-top: 2rem;
+        top:0;
+        font-size: 60%;
+    }
+}
